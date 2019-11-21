@@ -1,0 +1,9 @@
+{
+  "name": "react-dag-editor",
+  "version": "0.0.0",
+  "main": "dist/react-dag-editor",
+  "repository": "git@github.com:AML-StudioUX/react-dag-editor.git",
+  "author": "yucongj@microsoft.com",
+  "license": "MIT",
+  "private": false
+}
