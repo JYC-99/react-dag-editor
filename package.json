@@ -5,5 +5,12 @@
   "repository": "git@github.com:AML-StudioUX/react-dag-editor.git",
   "author": "yucongj@microsoft.com",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "react": "^16.12.0",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.11"
+  }
 }
