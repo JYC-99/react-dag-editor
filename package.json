@@ -11,10 +11,12 @@
   },
   "devDependencies": {
     "@storybook/addon-info": "^5.2.6",
+    "@storybook/addon-storyshots": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
+    "@types/storybook__addon-storyshots": "^5.1.1",
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
     "jest": "^24.9.0",
@@ -27,6 +29,7 @@
   },
   "scripts": {
     "build": "webpack",
+    "test": "jest",
     "storybook": "start-storybook"
   }
 }
