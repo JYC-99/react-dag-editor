@@ -27,12 +27,12 @@ export const ReactDagEditor: React.FunctionComponent<ReactDagEditorProps> = (pro
   return (
     <svg width={10000} height={10000}>
       {props.data.nodes.map(node => (
-        <g>
+        <g key={node.id}>
           <rect width={node.width} height={node.height} x={node.x} y={node.y} style={{fill:"rgb(0,0,255)",strokeWidth:3, stroke: "rgb(0,0,0)"}} />
           <text x={node.x} y={node.y + node.height / 2} fontSize={20}>{node.label}</text>
         </g>
       ))}
-      {props.data.edges.map(edge => {
+      {props.data.edges.map((edge, index) => {
         const sourceNode = props.data.nodes.find(node => node.id === edge.source);
 
         if (!sourceNode) {
@@ -46,7 +46,7 @@ export const ReactDagEditor: React.FunctionComponent<ReactDagEditorProps> = (pro
         }
 
         return (
-          <line x1={sourceNode.x + sourceNode.width} y1={sourceNode.y + sourceNode.height} x2={targetNode.x} y2={targetNode.y} style={{stroke: "rgb(255,0,0)", strokeWidth:2 }} />
+          <line key={index} x1={sourceNode.x + sourceNode.width} y1={sourceNode.y + sourceNode.height} x2={targetNode.x} y2={targetNode.y} style={{stroke: "rgb(255,0,0)", strokeWidth:2 }} />
         )
       })}
     </svg>
