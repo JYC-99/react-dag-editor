@@ -42,7 +42,7 @@ export const ReactDagEditor: React.FunctionComponent<IReactDagEditorProps> = pro
                 stroke: "rgb(0,0,0)"
               }}
             />
-            <text x={node.x} y={textY} fontSize={20}>
+            <text x={node.x} y={textY + node.x} fontSize={20}>
               {node.label}
             </text>
           </g>
